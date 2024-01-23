@@ -1,5 +1,29 @@
 <Doctype html>
 <html>
+ <head>
+    <title>Proyecto Técnico</title>
+    <style>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
 <body style="background-image: url('FondoSoporte.jpg'); background-repeat: no-repeat; background-size: cover;">
 <center><img src="girantescudo.gif" height="100" width="100"></center>
 <h1><b><center><p>NICOLÁS INFANTE DÍAZ</h1></b></center></p>
@@ -7,7 +31,19 @@
 <h2><b><center><p>Ramsés Patiño 3ro "N"</h2></b></center></p>
 <table bordercolor="black">
 <tr>
-<td bgcolor="pink"><h1><a href="index.html"><center>Diseño y Desarrollo Web</a></td><td bgcolor="lime"><h1> <a href="pagprogramation.html"><center>Programación y Base de Datos</a></td><td bgcolor="salmon"><h1> <a href="pagsistemas.html"><center>Sistemas Operativos y Redes</a></td><td bgcolor="yellow"><h1> <a href="pagsoporte.html"><center>Soporte Técnico</a></td><td bgcolor="orange"><h1> <a href="pagofimatica.html"><center>Aplicaciones Ofimáticas Locales y en Línea</a></td>
+<td bgcolor="pink"><h1><a href="index.html"><center>Diseño y Desarrollo Web</a></td><td bgcolor="lime"><h1> 
+<a href="pagprogramation.html"><center>Programación y Base de Datos</a></td><td bgcolor="salmon"><h1> 
+<a href="pagsistemas.html"><center>Sistemas Operativos y Redes</a></td>
+<td bgcolor="yellow" onclick="toggleDropdown()">
+    <h1>Soporte Técnico</h1>
+    <div class="dropdown-content" id="dropdownContent">
+       <a href="Primer Trimestre Soporte.html">Primer Trimestre</a>
+<a href="Segundo Trimestre Soporte.html">Segundo Trimestre</a>
+                    <a href="Tercer Trimestre Soporte.html">Tercer Trimestre</a>
+                </div>
+    </div>
+</td>
+<td bgcolor="orange"><h1><a href="pagofimatica.html"><center>Aplicaciones Ofimáticas Locales y en Línea</a></h1></td>
 </tr>
 </table>
 </center>
@@ -33,3 +69,10 @@
 </td>
 </tr>
 </table></center>
+<script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
